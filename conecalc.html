@@ -1,0 +1,69 @@
+<DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="hello.css"></link>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2>Area of a Cone</h2>
+        <form>
+            <label for="output">Area:</label><br />
+            <input type="text" id="output" name="output" disabled="true" /> <br /></br />
+
+            <label for="radio">radio:</radio></br />
+            <input type="text" id="radio" name="radio" /></br /></br />
+            <label for="slantheigth">slant heigth:</slantheigth></br />
+            <input type="text" id="slantheigth" name="slantheigth" /></br /></br />
+            <button type="button" onclick="area();">Calculate</button>
+        </form>
+        <script>
+
+            //unction calculateAreaOfCone() {
+
+                //var radio = document.getElementById("radio").value;
+                //var slantheigth = document.getElementById("slantheigth").value;
+                //var area = Math.PI * radio * slant heigth
+                //document.getElementById("output").value = area;
+            //}
+            class Square{
+
+              constructor(base , slantheigth){
+                this.base1 = base;
+                this.heigth1 = slantheigth;
+              }
+                get circ(){
+                  return this.radio;
+                  return this.slantheigth;
+                }
+                set b1(x){
+                  this.radio = x
+                }
+
+                set h1 (y){
+                  this.slantheigth = y
+                }
+
+
+                 calculateAreaOfSquare() {
+
+                    var area;
+                    area = this.radio * this.slantheigth;
+                    return area;
+                }
+              }
+
+
+               function area(){
+
+               var square = new Square (parseFloat(document.getElementById("radio").value),parseFloat(document.getElementById("slantheigth").value));
+               var result = square.calculateAreaOfSquare();
+              document.getElementById("output").value = result;
+             }
+
+
+        </script>
+        <br /><br />
+        <button><a href="index1.html">Go back</a></button>
+
+    </body>
+</html>

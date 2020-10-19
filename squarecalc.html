@@ -1,0 +1,58 @@
+<DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="hello.css"></link>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2>Area of a Square</h2>
+        <form>
+            <label for="output">Area:</label><br />
+            <input type="text" id="output" name="output" disabled="true" /> <br /></br />
+
+            <label for="base">base:</base></br />
+            <input type="text" id="base" name="base" /></br /></br />
+            <label for="heigth">heigth:</heigth></br />
+            <input type="text" id="heigth" name="heigth" /></br /></br />
+            <button type="button" onclick="area();">Calculate</button>
+        </form>
+        <script>
+        class Square{
+
+          constructor(base , heigth){
+            this.base1 = base;
+            this.heigth1 = heigth;
+          }
+            get sq(){
+              return this.base1;
+              return this.heigth1;
+            }
+            set b1(x){
+              this.base1 = x
+            }
+
+            set h1 (y){
+              this.heigth1 = y
+            }
+
+
+             calculateAreaOfSquare() {
+
+                var area;
+                area = this.base1 * this.heigth1;
+                return area;
+            }
+          }
+
+
+           function area(){
+          
+           var square = new Square (parseFloat(document.getElementById("base").value),parseFloat(document.getElementById("heigth").value));
+           var result = square.calculateAreaOfSquare();
+          document.getElementById("output").value = result;
+         }
+        </script>
+        <br /><br />
+        <button><a href="index1.html">Go back</a></button>
+    </body>
+</html>

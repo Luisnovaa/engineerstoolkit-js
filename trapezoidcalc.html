@@ -1,0 +1,72 @@
+<DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="hello.css"></link>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2>Area of a Trapezoid</h2>
+        <form>
+            <label for="output">Area:</label><br />
+            <input type="text" id="output" name="output" disabled="true" /> <br /></br />
+
+            <label for="largeside">largeside:</largeside></br />
+            <input type="text" id="largeside" name="largeside" /></br /></br />
+            <label for="smallside">smallside:</smallside></br />
+            <input type="text" id="smallside" name="smallside" /></br /></br />
+            <label for="heigth">heigth:</heigth></br />
+            <input type="text" id="heigth" name="heigth" /></br /></br />
+            <button type="button" onclick="area();">Calculate</button>
+        </form>
+        <script>
+            //function calculateAreaOfSquare() {
+
+                //var base = document.getElementById("base").value;
+                //var heigth= document.getElementById("heigth").value;
+                //var area = base * heigth
+                //document.getElementById("output").value = area;
+            //}
+            class Square{
+
+              constructor(smallside,largeside, heigth){
+                this.smallside = smallside;
+                this.heigth1 = heigth;
+                this.largeside = largeside
+              }
+                get sq(){
+                  return this.smallside;
+                  return this.heigth1;
+                  return this.largeside;
+                }
+                set b1(x){
+                  this.smallside = x
+                }
+
+                set h1 (y){
+                  this.heigth1 = y
+                }
+                set h1 (y){
+                  this.largeside = z
+                }
+
+                 calculateAreaOfSquare() {
+
+                    var area;
+                    area = ((this.mallside + this.largeside) / 2)* this.heigth;
+                    return area;
+                }
+              }
+
+
+               function area(){
+
+               var square = new Square (parseFloat(document.getElementById("smallbase").value),parseFloat(document.getElementById("heigth").value),parseFloat(document.getElementById("largeside").value));
+               var result = square.calculateAreaOfSquare();
+              document.getElementById("output").value = result;
+             }
+
+        </script>
+        <br /><br />
+        <button><a href="index1.html">Go back</a></button>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="hello.css"></link>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2>Area of a Circle</h2>
+        <form>
+            <label for="output">Area:</label><br />
+            <input type="text" id="output" name="output" disabled="true" /> <br /></br />
+
+            <label for="radio">radio:</radio></br />
+            <input type="text" id="radio" name="radio" /></br /></br />
+            <button type="button" onclick="area();">Calculate</button>
+        </form>
+        <script>
+            //function calculateAreaOfCircle() {
+
+                //var radio = document.getElementById("radio").value;
+              //  var area = Math.PI * radio **2;
+              //  document.getElementById("output").value = area;
+            //}
+            class Square{
+
+              constructor( radio){
+                this.radio = radio;
+
+              }
+                get sq(){
+                  return this.radio;
+
+                }
+                set r1(x){
+                this.radio = x
+                }
+
+
+
+
+                 calculateAreaOfSquare() {
+
+                    var area;
+                    //area = this.base1 * this.heigth1;
+                    area = Math.PI * this.radio **2;
+                    return area;
+                }
+              }
+
+
+               function area(){
+
+               var square = new Square (parseFloat(document.getElementById("radio").value));
+               var result = square.calculateAreaOfSquare();
+              document.getElementById("output").value = result;
+             }
+
+
+
+
+        </script>
+        <br /> <br />
+        <button><a href="index1.html">Go back</a></button>
+    </body>
+</html>

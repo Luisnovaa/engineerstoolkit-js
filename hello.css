@@ -1,0 +1,29 @@
+h1 {
+  color:blue;
+}
+body {
+  background-color:powderblue;
+}
+p {
+  background-color: white;
+  border: 2px solid GREEN;
+  padding: 30px
+}
+.center {
+  text-align: center;
+}
+.rigth {
+  float: rigth;
+  width: 300px;
+  padding: 10px;
+}
+img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button {
+      background-color: #ccff99;
+    }
+    

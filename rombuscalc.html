@@ -1,0 +1,67 @@
+<DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="hello.css"></link>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <h2>Area of a Rombus</h2>
+        <form>
+            <label for="output">Area:</label><br />
+            <input type="text" id="output" name="output" disabled="true" /> <br /></br />
+
+            <label for="largediagonal">largediagonal:</largediagonal></br />
+            <input type="text" id="largediagonal" name="largediagonal" /></br /></br />
+            <label for="smalldiagonal">smalldiagonal:</smalldiagonal></br />
+            <input type="text" id="smalldiagonal" name="smalldiagonal" /></br /></br />
+            <button type="button" onclick="area();">Calculate</button>
+        </form>
+        <script>
+            //function calculateAreaOfRombus() {
+
+                //var smalldiagonal = document.getElementById("smalldiagonal").value;
+                //var largediagonal = document.getElementById("largediagonal").value;
+                //var area = smalldiagonal * largediagonal / 2
+                //document.getElementById("output").value = area;
+            //}
+
+            class Square{
+
+              constructor(smalldiagonal , largediagonal){
+                this.smalldiagonal = smalldiagonal;
+                this.largediagonal = largediagonal;
+              }
+                get romb(){
+                  return this.smalldiagonal;
+                  return this.largediagonal;
+                }
+                set sd(x){
+                  this.smalldiagonal = x
+                }
+
+                set ld (y){
+                  this.largediagonal = y
+                }
+
+
+                 calculateAreaOfSquare() {
+
+                    var area;
+                    area = this.smalldiagonal * this.largediagonal/2;
+                    return area;
+                }
+              }
+
+
+               function area(){
+
+               var square = new Square (parseFloat(document.getElementById("smalldiagonal").value),parseFloat(document.getElementById("largediagonal").value));
+               var result = square.calculateAreaOfSquare();
+              document.getElementById("output").value = result;
+             }
+
+        </script>
+        <br /><br />
+        <button><a href="index1.html">Go back</a></button>
+    </body>
+</html>
